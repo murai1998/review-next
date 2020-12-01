@@ -3,16 +3,12 @@ const ReviewSchema = new mongoose.Schema({
 firstname: {
     type: String,
     required: [true, 'Please, enter your first name'],
-    unique: true,
-    trim: true,
-    maxLength: [25, 'Name cannot be longer than 25 characters']
+    maxlength: [25, 'Name cannot be longer than 25 characters']
 },
 lastname: {
     type: String,
     required: [true, 'Please, enter your last name'],
-    unique: true,
-    trim: true,
-    maxLength: [25, 'Last name cannot be longer than 40 characters']
+    maxlength: [25, 'Last name cannot be longer than 40 characters']
 },
 date: {
     type: Date
@@ -22,7 +18,7 @@ review: {
     required: [true, 'Please, leave your review '],
     unique: true,
     trim: true,
-    maxLength: [10000, 'Review cannot be longer than 10000 characters']
+    maxlength: [10000, 'Review cannot be longer than 10000 characters']
 },
 mark: {
     type: Number,
